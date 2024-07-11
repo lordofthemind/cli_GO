@@ -3,13 +3,13 @@ run: ## Run the application
 	go run main.go
 
 build_win: ## Build the application for Windows
-	GOOS=windows GOARCH=amd64 go build -o ./bin/win/liveFxGraphGo.exe main.go
+	GOOS=windows GOARCH=amd64 go build -o ./bin/win/wc.exe main.go
 
 build_lin: ## Build the application for Linux
-	GOOS=linux GOARCH=amd64 go build -o ./bin/linux/liveFxGraphGo main.go
+	GOOS=linux GOARCH=amd64 go build -o ./bin/linux/wc main.go
 
 build_mac: ## Build the application for MacOS
-	GOOS=darwin GOARCH=amd64 go build -o ./bin/mac/liveFxGraphGo main.go
+	GOOS=darwin GOARCH=amd64 go build -o ./bin/mac/wc main.go
 
 build_all: ## Build the application for all platforms
 	$(MAKE) build_lin
